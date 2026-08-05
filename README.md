@@ -1,6 +1,18 @@
 # Description
 Poc Use Claude Code with Openrouter. You can use free models to be used with Claude Code
 
+# Dependencies
+You must have claude code just installed in you host
+Linux:
+```shell
+$ curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Windows:
+```shell
+c:/ irm https://claude.ai/install.ps1 | iex
+```
+
 # Steps
 
 - **STEP01**: create project folder
@@ -9,13 +21,15 @@ $ mkdir claude-code-sample
 $ cd mkdir claude-code-sample
 ``` 
 
-- **STEP02**: create claude code configuration
+- **STEP02**: create claude code configuration file
+Create the claude local folder and the `settings.json` congiguration file:
+
 ```shell
 $ mkdir .claude
 $ nano .claude/settings.json
 ``` 
 
-With this data:
+Write this configuration. Inside you must fill your Openrouter API_KEY and model selected from there:
 ```shell
 {
   "env": {
@@ -29,7 +43,7 @@ With this data:
 ```
 
 - **STEP03**: open claude code
-Inside your code base directory, execute claude code
+Inside your previous code base directory `claude-code-sample`, execute claude code as usual
 ```shell
 $ claude
 ```
